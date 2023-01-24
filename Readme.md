@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Марина Османова](https://up.htmlacademy.ru/htmlcss/36/user/2325097).
-* Наставник: `Неизвестно`.
+* Наставник: [Дамир Масалимов](https://up.htmlacademy.ru/profession/frontender/16/htmlcss/36/user/441629).
 
 ---
 
