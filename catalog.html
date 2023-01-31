@@ -115,19 +115,22 @@
     </section>
   <section class="product-sorting" data-test="catalog">
     <h2 class="visually-hidden">Сортировка и список карточек</h2>
-    <p class="catalog-filter-text">Найдено гостиниц: <span>38</span></p>
+    <p class="catalog-filter-text">Найдено гостиниц: <span class="filter-number">38</span></p>
     <select class="select-control" aria-label="Сортировка">
       <option value="cheap">Сначала дешевые</option>
     </select>
-    <a class="button" href="#">
-      <span class="visually-hidden">Показать карточки</span>
-    </a>
-    <a class="button" href="#">
-      <span class="visually-hidden">Показать одну карточку</span>
-    </a>
-    <a class="button" href="#">
-      <span class="visually-hidden">Показать список</span>
-    </a>
+    <label>
+      <input class="view-type" type="radio" name="view-type" value="small-cards" checked>
+      <span class="visually-hidden">Показать мелкие карточки</span>
+    </label>
+    <label>
+      <input class="view-type" type="radio" name="view-type" value="big-cards">
+      <span class="visually-hidden">Показать крупные карточки</span>
+    </label>
+    <label>
+      <input class="view-type" type="radio" name="view-type" value="list-cards">
+      <span class="visually-hidden">Показать список карточек</span>
+    </label>
   <ul class="product-list">
     <li class="product-card">
       <img class="product-card-image" src="images/hotel/hotel-1.jpg" width="300" height="212" alt="Вид из пещеры на звёздное небо">
