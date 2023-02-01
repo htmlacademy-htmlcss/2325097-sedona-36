@@ -56,3 +56,12 @@ body {
   background-color: #756157;
   text-transform: uppercase;
 }
+
+.intro {
+  color: #000000;
+  background-color: #c7ce18;
+  background-image: url("../images/background/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
