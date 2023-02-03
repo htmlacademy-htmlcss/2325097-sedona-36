@@ -18,8 +18,13 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   color: #000000;
+}
+
+.container {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -135,4 +140,51 @@ body {
 .hotel-search-button {
   font-size: 20px;
   line-height: 36px;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribe-index {
+  background-image: url(../images/background/bg-subscription.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.subscribe-field {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #F2F2F2;
+}
+
+.button-submit {
+  background-color: #82B3D3;
+  color: #ffffff;
+}
+
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
 }
