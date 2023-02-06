@@ -45,7 +45,7 @@
           </ul>
         </nav>
       </header>
-      <main class="main-inner" data-test="main">
+      <main class="main" data-test="main">
         <div class="inner-wrap">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -196,33 +196,34 @@
             <li class="pagination-item">
               <a class="pagination-link" href="#">4</a>
             </li>
-            <li class="pagination-item pagination-current-next">
+            <li class="pagination-item pagination-item-next">
               <span>...</span>
+            </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
         </section>
         <section class="subscribe" data-test="subscribe">
-          <h2 class="subscribe-title">
+          <h2 class="title subscribe-title">
             Подпишитесь на рассылку
           </h2>
           <div class="subscribe-content">
-            <p class="subscribe-description subscribe-description-catalog">
+            <p class="description subscribe-description">
               Только полезная информация и никакого спама, честное бойскаутское!
             </p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="newsletter-email">
                 <span class="visually-hidden">E-mail</span>
               </label>
-              <input class="subscribe-field" type="email" name="newsletter-email"
-                id="newsletter-email" placeholder="Ваш e-mail" required>
+              <input class="subscribe-field" type="email" name="newsletter-email" id="newsletter-email"
+                placeholder="Ваш e-mail" required>
               <button class="button button-submit" type="submit">Подписаться</button>
             </form>
           </div>
         </section>
       </main>
-      <footer class="page-footer" data-test="footer">
+      <footer class="footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Соцсети</h2>
           <ul class="footer-social-list">
