@@ -65,20 +65,19 @@ body {
 }
 
 .navigation {
-  position: relative;
-  padding-left: 184px;
-  box-sizing: border-box;
-  padding-right: 0;
   display: flex;
+  position: relative;
 }
 
 .logo {
   display: block;
   width: 140px;
   margin-right: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-bottom: -10px;
+}
+
+.logo-img {
+  display: block;
 }
 
 .navigation-list {
@@ -109,7 +108,7 @@ body {
   content: '';
   display: block;
   height: 2px;
-  background: #756257;
+  background-color: #756257;
   position: relative;
   top: 20px;
 }
@@ -124,7 +123,7 @@ body {
   margin-right: 0;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.navigation-link-search {
   background-image: url("../images/search.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -133,7 +132,7 @@ body {
   padding: 0;
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-link-like {
   background-image: url("../images/like.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -146,7 +145,7 @@ body {
 .navigation-counter {
   font-size: 10px;
   line-height: 10px;
-  background: #7DB54F;
+  background-color: #7DB54F;
   border-radius: 50%;
   padding: 5px;
   position: relative;
@@ -160,7 +159,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   color: #ffffff;
-  background: #756157;
+  background-color: #756157;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -174,11 +173,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding: 51px 371px 82px;
-}
-
-.hero-welcome {
-  height: 100%;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 .advantages {
@@ -195,23 +191,25 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .advantages-text-one {
   width: 620px;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 .description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0;
 }
 
 .advantages-text-two {
   margin: 0;
-  padding-bottom: 90px;
-  padding-top: 25px;
+  margin-bottom: 90px;
 }
 
 .advantages-list {
@@ -242,10 +240,12 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .advantages-description {
   color: #333333;
+  margin: 0;
 }
 
 .advantages-item-blue .advantages-description {
@@ -261,6 +261,7 @@ body {
 .advantages-image {
   height: 100%;
   width: auto;
+  display: block;
 }
 
 .advantages-of-hotels {
@@ -398,7 +399,7 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  margin-top: 0;
+  margin: 0;
 }
 
 .breadcrumbs {
@@ -466,12 +467,12 @@ body {
   display: flex;
 }
 
-.catalog-filter-text,
-.filter-number {
+.catalog-filter-text {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .select-control {
@@ -505,15 +506,17 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
 }
 
-.product-card-text,
-.product-card-price {
+.product-card-text {
   color: #333333;
+  margin: 0;
 }
 
 .product-card-price {
   font-weight: 400;
+  color: #333333;
 }
 
 .product-card-button {
@@ -524,11 +527,16 @@ body {
   background-color: #7db54f;
 }
 
+.product-stars {
+  margin: 0;
+}
+
 .product-card-rating {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #333333;
+  margin: 0;
 }
 
 .pagination {
