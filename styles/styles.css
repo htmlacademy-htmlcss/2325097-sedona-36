@@ -14,7 +14,13 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -22,9 +28,29 @@ body {
   color: #000000;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
 .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .header {
@@ -32,33 +58,113 @@ body {
   color: #000000;
 }
 
+.content-box {
+  width: 1060px;
+  padding: 0 70px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  margin-right: 30px;
+  margin-bottom: -10px;
+}
+
+.logo-img {
+  display: block;
+}
+
+.navigation-list {
+  width: 640px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navigation-item {
+  margin-right: 32px;
+}
+
 .navigation-link {
-  font-weight: 700;
+  display: block;
   font-size: 20px;
   line-height: 24px;
-  color: #000000;
+  font-weight: 700;
   text-decoration: none;
   text-align: center;
+  color: #000000;
+}
+
+.navigation-link-current:after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #756257;
+  position: relative;
+  top: 20px;
+}
+
+.navigation-user {
+  width: 400px;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-item {
+  margin-right: 0;
+}
+
+.navigation-link-search {
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 44px;
+  min-height: 64px;
+  padding: 0;
+}
+
+.navigation-link-like {
+  background-image: url("../images/like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+  min-width: 44px;
+  min-height: 64px;
+  padding: 0;
 }
 
 .navigation-counter {
   font-size: 10px;
   line-height: 10px;
-  color: #ffffff;
-  background-color: #7db54f;
-  text-align: center;
+  background-color: #7DB54F;
   border-radius: 50%;
   padding: 5px;
+  position: relative;
+  left: 8px;
+  top: 5px;
+  color: #ffffff;
 }
 
 .button {
-  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700;
   color: #ffffff;
   background-color: #756157;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  padding: 9px 34px 6px 34px;
 }
 
 .hero {
@@ -67,10 +173,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  padding-top: 51px;
+  padding-bottom: 82px;
+}
+
+.advantages {
+  padding-top: 65px;
 }
 
 .centered-text {
   text-align: center;
+  margin: 0 auto;
 }
 
 .title {
@@ -78,23 +191,37 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.advantages-text-one {
+  width: 620px;
+  margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 .description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0;
 }
 
-.advantages-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
+.advantages-text-two {
+  margin: 0;
+  margin-bottom: 90px;
 }
 
-.advantages-description {
-  color: #333333;
+.advantages-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  display: flex;
 }
 
 .advantages-item-blue {
@@ -102,8 +229,43 @@ body {
   color: #ffffff;
 }
 
+.advantages-container {
+  width: 400px;
+  padding: 102px 85px;
+  box-sizing: border-box;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.advantages-description {
+  color: #333333;
+  margin: 0;
+}
+
 .advantages-item-blue .advantages-description {
   color: #ffffff;
+}
+
+.advantages-image-container {
+  height: 100%;
+  width: 800px;
+  overflow: hidden;
+}
+
+.advantages-image {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.advantages-of-hotels {
+  padding-top: 64px;
 }
 
 .advantages-item-light-gray {
@@ -114,9 +276,24 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+/* Блок поиска на главной странице*/
+
+.search {
+  width: 592px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .search-button {
   font-size: 20px;
   line-height: 36px;
+}
+
+/* Блок подписки на главной странице*/
+
+.subscribe {
+  padding-top: 96px;
+  padding-bottom: 104px;
 }
 
 .subscribe-index {
@@ -127,8 +304,13 @@ body {
   background-color: #000000;
 }
 
+.subscribe-content {
+  width: 684px;
+  margin: 0 auto;
+}
+
 .subscribe-index .description {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .subscribe-field {
@@ -148,13 +330,46 @@ body {
   background-color: #82b3d3;
 }
 
+/* Подвал */
+
+.footer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.footer-social {
+  width: 170px;
+  outline: 1px solid red;
+}
+
+.footer-social-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social-item {
+  min-width: 48px;
+  min-height: 40px;
+}
+
 .footer-social-link {
   color: #000000;
   text-decoration: none;
 }
 
+.footer-contacts {
+  display: flex;
+}
+
 .footer-contacts-address {
   font-style: normal;
+  width: 720px;
 }
 
 .footer-contacts-phone {
@@ -163,6 +378,10 @@ body {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-contacts-htmlacademy-link {
+  width: 170px;
 }
 
 /*стилизация catalog.html*/
@@ -180,10 +399,17 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
 }
 
 .breadcrumbs {
   color: #ffffff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  width: 114px;
+  outline: 1px solid red;
 }
 
 .breadcrumbs-link {
@@ -193,6 +419,15 @@ body {
   color: inherit;
 }
 
+.catalog-filter {
+  display: flex;
+}
+
+.catalog-filter-group {
+  width: 150px;
+  margin-right: 70px;
+}
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
@@ -200,9 +435,24 @@ body {
   text-transform: capitalize;
 }
 
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .control {
   font-size: 18px;
   line-height: 23px;
+}
+
+.filter-price {
+  width: 288px;
+}
+
+.catalog-buttons-wrap {
+  max-width: 191px;
+  margin-left: auto;
 }
 
 .button-apply {
@@ -213,27 +463,60 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.catalog-filter-text,
-.filter-number {
+.sorting-container {
+  display: flex;
+}
+
+.catalog-filter-text {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.select-control {
+  width: 292px;
+  margin-right: 70px;
+}
+
+.view-type-wrap {
+  width: 160px;
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  box-sizing: border-box;
+  width: 340px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .product-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
 }
 
-.product-card-text,
-.product-card-price {
+.product-card-text {
   color: #333333;
+  margin: 0;
 }
 
 .product-card-price {
   font-weight: 400;
+  color: #333333;
 }
 
 .product-card-button {
@@ -244,20 +527,33 @@ body {
   background-color: #7db54f;
 }
 
+.product-stars {
+  margin: 0;
+}
+
 .product-card-rating {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #333333;
+  margin: 0;
 }
 
 .pagination {
   color: #ffffff;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .pagination-item {
   background-color: #82b3d3;
+  margin-right: 8px;
+  border-radius: 4px;
 }
 
 .pagination-link {
@@ -266,6 +562,8 @@ body {
   font-weight: 700;
   color: inherit;
   text-decoration: none;
+  display: block;
+  padding: 12px 24px;
 }
 
 .pagination-current {
