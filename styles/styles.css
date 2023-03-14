@@ -1038,6 +1038,7 @@ body {
   background: #FFFFFF;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  display: none;
 }
 
 .popover-content {
