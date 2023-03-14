@@ -75,13 +75,13 @@
             </li>
             <li class="advantages-item advantages-item-gray">
               <div class="advantages-container">
-                <h3 class="advantages-title liner">Красивая<br>дорога</h3>
+                <h3 class="advantages-title liner">Красивая дорога</h3>
                 <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-light-gray">
               <div class="advantages-container">
-                <h3 class="advantages-title liner">Мало<br>туристов</h3>
+                <h3 class="advantages-title liner">Мало туристов</h3>
                 <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
@@ -91,7 +91,7 @@
                   alt="Участок Гранд-Каньона">
               </div>
               <div class="advantages-container">
-                <h3 class="advantages-title liner">Там есть мост дьявола</h3>
+                <h3 class="advantages-title liner">Там есть мост&nbsp;дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -99,8 +99,9 @@
         </section>
         <section class="advantages-of-hotels centered-text" data-test="advantages">
           <h2 class="visually-hidden">Преимущества отелей</h2>
-          <p class="title advantages-text-one">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-          <p class="description advantages-text-two">Опытный персонал и качественное обслуживание!</p>
+          <p class="title advantages-text-one service-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+          <p class="description advantages-text-two service-description">Опытный персонал и качественное обслуживание!
+          </p>
           <ul class="advantages-list advantages-icos">
             <li class="advantages-item advantages-item-light-gray">
               <div class="advantages-container">
@@ -196,6 +197,55 @@
         </section>
       </footer>
     </div>
+
+    <div class="popover popover-cart">
+
+      <div class="popover-content">
+        <h2 class="popover-title">Поиск гостиницы в Седоне</h2>
+        <button class="popover-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
+          <Label class="appointment-label">
+            <span class="field-label label-in">Дата заезда:</span>
+            <input class="appointment-input date-input" type="text" id="date-in" name="date-in"
+              placeholder="27 апреля 2020">
+            <span class="input-message input-message-error">Мы не можем отправить вас в прошлое.</span>
+          </Label>
+          <Label class="appointment-label">
+            <span class="field-label label-from">Дата выезда:</span>
+            <input class="appointment-input date-input" type="text" id="date-from" name="date-from"
+              placeholder="1 сентября 2023">
+            <span class="input-message">На эти даты есть свободные номера. Пока есть.</span>
+          </Label>
+          <div class="number-input-wrap">
+          <Label class="appointment-label">
+            <span class="field-label fild-number-label">Взрослые:</span>
+            <div class="numbers-wrapper">
+              <button type="button" class="sign-minus"></button>
+              <input class="appointment-input number-input" type="number" id="date-in" name="date-in" placeholder="0" value="2">
+              <button type="button" class="sign-plus"></button>
+            </div>
+          </Label>
+          <Label class="appointment-label">
+            <span class="field-label fild-number-label label-tooltip">Дети:</span>
+            <span class="info"></span>
+            <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            <div class="numbers-wrapper">
+              <button type="button" class="sign-minus"></button>
+              <input class="appointment-input number-input" type="number" id="date-in" name="date-in" placeholder="0" value="2">
+              <button type="button" class="sign-plus"></button>
+            </div>
+          </Label>
+          </div>
+          <button class="button appointment-form-button" type="submit">Найти</button>
+        </form>
+
+      </div>
+    </div>
+
+
   </body>
 
 </html>
