@@ -156,8 +156,6 @@ body {
   text-decoration: none;
   text-align: center;
   color: #000000;
-  position: relative;
-  z-index: 1;
 }
 
 .navigation-link-current:after {
@@ -167,16 +165,13 @@ body {
   background-color: #756257;
   position: relative;
   top: 20px;
+  z-index: 1;
 }
 
 .navigation-user {
   width: 400px;
   justify-content: flex-end;
   margin-left: auto;
-}
-
-.navigation-user .navigation-item {
-  margin-right: 0;
 }
 
 .navigation-link-search {
@@ -211,10 +206,12 @@ body {
 }
 
 .navigation-link-button {
-  padding: 0;
+  width: 160px;
+  box-sizing: border-box;
 }
 
 .button {
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -224,7 +221,7 @@ body {
   text-decoration: none;
   text-align: center;
   border-radius: 4px;
-  padding: 9px 34px 6px 34px;
+  padding: 8px 34px;
   cursor: pointer;
 }
 
@@ -365,15 +362,15 @@ body {
 }
 
 .service-house {
-  background-image: url(../images/gallery-icon/house.svg);
+  background-image: url("../images/gallery-icon/house.svg");
 }
 
 .service-food {
-  background-image: url(../images/gallery-icon/food.svg);
+  background-image: url("../images/gallery-icon/food.svg");
 }
 
 .service-souvenir {
-  background-image: url(../images/gallery-icon/souvenir.svg);
+  background-image: url("../images/gallery-icon/souvenir.svg");
 }
 
 .advantages-title {
@@ -432,13 +429,17 @@ body {
 }
 
 .search-description {
-  margin-bottom: 57px;
+  margin-bottom: 54px;
 }
 
 .search-button {
   font-size: 20px;
-  line-height: 48px;
-  padding: 14px 50px;
+  line-height: 36px;
+  padding: 8px 50px;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*стили для модального окна*/
@@ -494,7 +495,7 @@ body {
 .popover-close-button::after {
   content: "";
   display: block;
-  background-image: url(../images/popover/popover-close.svg);
+  background-image: url("../images/popover/popover-close.svg");
   background-repeat: no-repeat;
   background-position: center;
   height: 21px;
@@ -546,7 +547,7 @@ body {
   font: inherit;
   font-size: 18px;
   line-height: 24px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 4px;
   padding: 12px 20px;
   border: 0;
@@ -567,12 +568,12 @@ body {
 
 .date-input:focus {
   background-color: #e6e6e6;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83d3d3;
 }
 
 .date-input:active {
-  background-color: #F2F2F2;
-  border: 2px solid #000000;
+  background-color: #f2f2f2;
+  outline: 2px solid #000000;
 }
 
 .appointment-input::placeholder {
@@ -596,6 +597,7 @@ body {
 .people-wrapper {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 48px;
@@ -773,7 +775,7 @@ body {
 }
 
 .subscribe-index {
-  background-image: url(../images/background/bg-subscription.jpg);
+  background-image: url("../images/background/bg-subscription.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
@@ -794,6 +796,7 @@ body {
 }
 
 .subscribe-form {
+  display: -webkit-box;
   display: flex;
 }
 
@@ -802,6 +805,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   background-color: #f2f2f2;
+  -webkit-box-flex: 1;
   flex-grow: 1;
   margin: 0;
   padding: 14px 20px;
@@ -822,7 +826,7 @@ body {
   border-radius: 0 5px 5px 0;
   padding-left: 50px;
   padding-right: 50px;
-  letter-spacing: -2px;
+  margin: 0;
 }
 
 /* Подвал */
@@ -1197,14 +1201,15 @@ body {
 .catalog-buttons-wrap {
   width: 191px;
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 55px;
 }
 
 .button-apply {
   width: 191px;
   background-color: #82b3d3;
-  margin-bottom: 31px;
+  margin-bottom: 32px;
   border: 0;
+  padding: 8px;
 }
 
 .button-reset {
@@ -1212,6 +1217,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: 3px solid rgba(0, 0, 0, 0);
   border-radius: 4px;
+  padding: 5px;
 }
 
 .product-sorting {
@@ -1368,7 +1374,7 @@ body {
 
 .product-card-button {
   background-color: #82b3d3;
-  padding: 5px;
+  padding: 8px;
   border: 0;
 }
 
@@ -1406,9 +1412,6 @@ body {
 .product-card-rating {
   padding: 8px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
   color: #333333;
   background-color: #f2f2f2;
 }
